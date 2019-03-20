@@ -7,7 +7,7 @@ btn.addEventListener('click', () => {
 let year = document.getElementById('year').value;
 let title =document.getElementById('title').value;
 let type = document.getElementById('type').value;
-let url= 'http://www.omdbapi.com/?s='+title+'&y='+year+'&apiKey=5648970a';
+let url= 'http://www.omdbapi.com/?s='+title+'&y='+year+'&plot=full&apiKey=5648970a';
 if (type != '') {
 	url += '&type='+type;
 
@@ -27,7 +27,7 @@ fetch(url)
 
 	data.Search.forEach(function(element){
 	 	text += `<div class="row">
-	    <div class="col s12 m6">
+	    <div class="col s12 m3">
 	      <div class="card">
 	        <div class="card-image">
 	          <img src="${element.Poster}">
@@ -35,13 +35,19 @@ fetch(url)
 	          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
 	        </div>
 	        <div class="card-content">
-	          <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-	          <a></a>
+	          <p>${element.imdbID}</p>
+	          <p>'${element.Year}'</p>
+
 	        </div>
 	      </div>
 	    </div>
 	  </div>`;
 
+	  let id = element.imdbID;
+	  
+
+
+	  console.log(data)
 	 });
 
   	cardContainer.innerHTML= text;
