@@ -25,20 +25,23 @@ fetch(url)
 	let text ='';
 
 	data.Search.forEach(function(element){
-	 	text += `<div class="row">
-	    <div class="col s12 m6">
+		 text += `<div class="row">
+		 <div class="col s12 m6">
 	      <div class="card">
 	        <div class="card-image">
 	          <img src="${element.Poster}">
-	          <span class="card-title">Card Title</span>
+	          
 	          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
 	        </div>
 	        <div class="card-content">
-	          <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+						<p><span class="card-title">${element.Title}</span>.</p>
+						
+						<p>${element.Year}</p>
 	        </div>
 	      </div>
 	    </div>
-	  </div>`;
+		</div>`
+		
 
 	 });
 
@@ -51,3 +54,21 @@ fetch(url)
 })
 
 
+
+				
+/*
+		
+		 <div class="card">
+		 <div class="card-image waves-effect waves-block waves-light">
+			 <img class="activator" src="${element.Poster}">
+		 </div>
+		 <div class="card-content">
+			 <span class="${element.Title} activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+			 <p><a href="#">This is a link</a></p>
+		 </div>
+		 <div class="card-reveal">
+			 <span class="${element.Title}grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+			 <p>${element.Plot}</p>
+		 </div>
+		 </div>
+		 */
