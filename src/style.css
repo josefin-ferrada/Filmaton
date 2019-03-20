@@ -1,0 +1,60 @@
+/*selector universal "*"*/
+*{
+    padding: 0px; 
+    margin: 0px auto;
+    font-family: roboto;
+
+    
+} 
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: black;
+    font-family: roboto;
+    color: white; 
+}
+
+footer{
+    margin:0px;
+}
+
+nav{
+    background-color: black;
+    position: fixed;
+    z-index: 100;
+    padding: 0px 100px;
+    top: 0px;
+    height: 100px;
+}
+
+nav li a{
+    font-size: 32px;
+}
+
+#logo{ 
+    height: 60px;   
+    padding-top: 10px;      
+}
+
+/* Estilos footer */ 
+
+footer{
+    background-color:black; 
+    padding: 0px 100px;
+    height: 80px;  
+}
+
+footer p{
+    padding-top: 10px;
+    font-size: 14px;
+    color: white;
+    text-align: left;    
+}
+
+/*a)Página de inicio*/
+
+#divone{
+    padding-top: 100px; 
+}

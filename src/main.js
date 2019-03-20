@@ -1,5 +1,4 @@
 
-
 let btn = document.getElementById('search');
 
 btn.addEventListener('click', () => {
@@ -56,5 +55,4 @@ fetch(url)
 })
 .catch(err => console.log(err));
 })
-
 
