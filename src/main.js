@@ -12,6 +12,7 @@ if (type != '') {
 	url += '&type='+type;
 
 }
+
 console.log(url)
 
 
@@ -34,9 +35,12 @@ fetch(url)
 	          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
 	        </div>
 	        <div class="card-content">
+
 						<p><span class="card-title">${element.Title}</span>.</p>
 						
 						<p>${element.Year}</p>
+
+
 	        </div>
 	      </div>
 	    </div>
@@ -54,21 +58,3 @@ fetch(url)
 })
 
 
-
-				
-/*
-		
-		 <div class="card">
-		 <div class="card-image waves-effect waves-block waves-light">
-			 <img class="activator" src="${element.Poster}">
-		 </div>
-		 <div class="card-content">
-			 <span class="${element.Title} activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-			 <p><a href="#">This is a link</a></p>
-		 </div>
-		 <div class="card-reveal">
-			 <span class="${element.Title}grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-			 <p>${element.Plot}</p>
-		 </div>
-		 </div>
-		 */
