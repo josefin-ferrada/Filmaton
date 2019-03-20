@@ -2,15 +2,29 @@
 <html>
 <head>
     <title>Pelis</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 </head>
 <body>
 
-    <div class="container">
-        <p> Hola</p>
-        <input type="text" id="title"name="">
-        <button> presiona</button>
-        <input type="year" name="">
+    <div class="container ">
+        <p>Buscador de films</p>
+        <input type="text" id="title"name="" placeholder="Ingrese Título del film">
+        <button id="search" class="waves-effect waves-light btn"> presiona</button>
+        <input id="year" type="text" name="" placeholder="Ingrese año del film">
+        <div class="input-field col s12">
+        <select id="type" class="browser-default" >
+        	<option value="">ninguna</option>
+        	<option value="movie">Películas</option>
+        	<option value="series">Series</option>
+
+        </select>
+        </div>
     </div>
+
+    <section id="id1"></section>
+
     <script src="main.js"></script>
 </body>
 </html>
