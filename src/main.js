@@ -12,6 +12,7 @@ if (type != '') {
 	url += '&type='+type;
 
 }
+
 console.log(url)
 
 
@@ -35,6 +36,7 @@ fetch(url)
 	        </div>
 	        <div class="card-content">
 	          <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+	          <a></a>
 	        </div>
 	      </div>
 	    </div>
