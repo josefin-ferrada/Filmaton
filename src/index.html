@@ -5,11 +5,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+    <nav class="nav-wrapper">        
+        <a href="#" class="brand-logo">
+          <img src="Image/LogoPokeChoose.png" id="logo" alt="logo Filmaton"/> 
+        </a>
+        <a  data-target="mobile-demo" class="sidenav-trigger">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul class="right hide-on-med-and-down"> 
+          <li><a class="tutorial" href="#">¿Quienes somos?</a></li>
+          <li><a class="search" href="#">Iniciar búsqueda</a></li>
+        </ul>     
+    </nav>
 
-    <div class="container ">
+    <div id="divone" class="container">
         <p>Buscador de films</p>
         <input type="text" id="title"name="" placeholder="Ingrese Título del film">
         <button id="search" class="waves-effect waves-light btn"> presiona</button>
@@ -26,6 +39,11 @@
     </div>
 
     <section id="id1"></section>
+    <footer>
+        <p>Enciclopedia de películas Filmaton, Chile</p> 
+        <p>Diseñado y construido por plagio.org©</p>
+      </footer>  
+
 
     <script src="main.js"></script>
 </body>
