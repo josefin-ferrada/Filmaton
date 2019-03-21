@@ -34,8 +34,9 @@ nav li a{
 }
 
 #logo{ 
-    height: 60px;   
-    padding-top: 10px;      
+    height: 130px;   
+    padding-top: 10px; 
+    padding-left: 100px;     
 }
 
 /* Estilos footer */ 
@@ -57,4 +58,7 @@ footer p{
 
 #divone{
     padding-top: 100px; 
+}
+#carrusel, #carruselone, #carruseltwo, #carruseltree, #carruselfour {
+   transition: 0ms;
 }
