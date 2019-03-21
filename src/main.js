@@ -11,9 +11,12 @@ btnTwo.addEventListener('click', () => {
 		<option value="1">1Hr</option>
 		<option value="2">2Hr</option>
 		<option value="3">3Hr</option>
-	</div>
-	</div>
-	  </select>
+	
+	
+		</select>
+		</div>
+		</div>
+
 <div class="col s12 s4 m4 l4 ">
 	  <select id="typeTwo" class="browser-default margin-form no">
 		<option value="" >Genero</option>
