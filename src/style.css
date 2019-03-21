@@ -5,8 +5,9 @@
 } 
 
 input{
-    color: white;
+    color:#FFFA7D
     width: 100%;
+
 
 }
 
@@ -19,6 +20,7 @@ body {
     color: white; 
     font-family: 'Saira Extra Condensed', sans-serif;
     font-size: 16px;
+    
 }
 
 #title,#year{
@@ -33,7 +35,7 @@ nav{
     position: fixed;
     z-index: 100;
     padding: 0px 100px;
-    top: 0px;
+    top: 50px;
     height: 200px;
 }
 
@@ -77,12 +79,28 @@ footer p{
 /*a)Página de inicio*/
 
 #divone{
-    padding-top: 200px; 
+    padding-top: 300px; 
     display: inherit;
     width: 100%;
-    margin-left: 100px;
+    margin-left: 65px;
+    max-width: 1000px;
+    
+}
+#selectfilm{
+    width: 122%;
+    background-color: black;
+    border: solid #FFFA7D;
+    color:#FFFA7D;
 }
 
+#title{
+    margin-left: 70px;
+    color:#FFFA7D;
+}
+#year{
+    margin-left: 60px;
+    color:#FFFA7D;
+}
 table{
     width: 0%;
 }
@@ -91,14 +109,19 @@ a{
     font-size: 20px;
 }
 
+
+
 #search{
-    margin-left: 100px;
+    margin-left: 90px;
+    margin-top: 25px;
+    background-color: black;
+    border: solid #FFFA7D;
+    color:#FFFA7D;
 }
 
 .margin-form{
-    margin-left: 100px;
+    margin-left: 50px;
 }
-
 .align-image{
     text-align: center;
 }
@@ -106,4 +129,8 @@ a{
 .modal-content {
     padding: 14px;
     padding-left: 0px;
+}
+
+#type{
+    display: none;
 }

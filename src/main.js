@@ -1,11 +1,33 @@
-
+let btnTwo = document.getElementById('searchTwo');
+btnTwo.addEventListener('click', () => {
+	let cardContainer = document.getElementById("divone");
+	cardContainer.innerHTML='';
+	cardContainer.innerHTML+=	
+	` 
+	<div class="input-field" >
+	<select id="typeOne" class="browser-default margin-form no">
+		<option value="" >Tiempo Disponible</option>
+		<option value="1">1Hr</option>
+		<option value="2">2Hr</option>
+		<option value="3">3Hr</option>
+	</select>
+	<select id="typeTwo" class="browser-default margin-form no">
+		<option value="" >Genero</option>
+		<option value="1">Drama</option>
+		<option value="2">Terror</option>
+		<option value="3">Accion</option>
+		<option value="1">Comedia</option>
+		<option value="2">Aventura</option>
+		<option value="3">Musical</option>
+	</select>
+</div>`	
+});
 let btn = document.getElementById('search');
-
 btn.addEventListener('click', () => {
 
 let year = document.getElementById('year').value;
 let title =document.getElementById('title').value;
-let type = document.getElementById('type').value;
+let type = document.getElementById('selectfilm').value;
 let url= 'http://www.omdbapi.com/?s='+title+'&y='+year+'&apiKey=5648970a';
 if (type != '') {
 	url += '&type='+type;
@@ -125,10 +147,7 @@ fetch(url)
 	    });
 	}
 
-	else{
-
-		alert("Llena el campo de titulo")
-	}
+	
 
 
 })
