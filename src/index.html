@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,48 +28,34 @@
 
     <div id="divone" class="container col l12 ">
 
-        <div class="input-field col s4">
-            <input type="text" id="title" name="" placeholder="Ingrese Título del film" value="batman">
-        </div>
         <div class="input-field col s4 margin-form">
-            <input id="year" type="text" name="" placeholder="Ingrese año del film">
-        </div>
-        <div class="input-field col s4 margin-form">
-            <select id="type" class="browser-default" >
-            <option value="">ninguna</option>
-            <option value="movie">Películas</option>
-            <option value="series">Series</option>
+            <select id="selectfilm" class="browser-default" >
+              <option value="type">Escoge lo que buscas</option>
+              <option value="movie">Películas</option>
+              <option value="series">Series</option>
+  
+            </select>
+          </div>
 
-        </select>
+      <div class="input-field col s4">
+          <input type="text" id="title" name="" placeholder="Ingrese Título">
+      </div>
+        <div class="input-field col s4 margin-form">
+            <input id="year" type="text" name="" placeholder="Ingrese Año">
         </div>
+
+
          <div class="col s9 m4 l4">
-
-      <div class="input-field">
-        <select id="type" class="browser-default margin-form">
-          <option value="" >Tiempo Disponible</option>
-          <option value="1">1Hr</option>
-          <option value="2">2Hr</option>
-          <option value="3">3Hr</option>
-        </select>
-      </div>
-    </div>
-    <div class="col s12 m4 l4">
-      <div class="input-field">
-        <select id="type" class="browser-default margin-form">
-          <option value="" >Genero</option>
-          <option value="1">1Hr</option>
-          <option value="2">2Hr</option>
-          <option value="3">3Hr</option>
-        </select>
-      </div>
-    </div>
-   </div>
-       
-    </div>
-    <div> <a id="search" class="waves-effect waves-light btn">&nbsp;Iniciar Búsqueda&nbsp;</a></div>
-
+           <a id="search" class="waves-effect waves-light btn">&nbsp;Iniciar&nbsp;
+              <p>¿Necesitas más detalles?</p>  
+          </a>
+          <p>¿Necesitas más detalles?</p>
+          <a id="searchTwo" class="waves-effect waves-light btn">&nbsp;Búsqueda Avanzada&nbsp;</a></div>
+          </div>
+    
    
-    <section >
+    
+          <section>
         <div class="row" style="width: 1200px;" id="id1">
             <div class="col s12 m4 l5" >
               
@@ -87,5 +73,4 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="main.js"></script>
 </body>
-
 </html>
