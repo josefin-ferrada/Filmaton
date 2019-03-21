@@ -4,7 +4,7 @@
 
 ## 🚀 Planificación 
 
-La planificación comienza reconociendo en conjunto la API de [OMDB](), la que contiene infinita información de películas y series. 
+La planificación comienza reconociendo en conjunto la API de [OMDB](http://www.omdbapi.com/), la que contiene infinita información de películas y series. 
 
 El squad decidió trabajar en base a _historias de usuario_, complementadas con _dailys_ y _retrospectivas diarias_. 
 
@@ -28,14 +28,19 @@ Para reconocer al usuario se realizó una [encuesta](https://docs.google.com/for
 
 Una vez reconocido el usuario, comienza el proceso creativo compuesto  en primer lugar po un diagrama de flujo que grafica el flujo que debería tener la aplicación, considerando cambios de interfaces y filtración de información.
 
-![Diagrama de flujo](image_readme/.)
+![Diagrama de flujo](image_readme/diagrama_de_flujo.jpg)
 
 **- Prototipo de baja fidelidad**
 
 A partir del diagrama de flujo y el reconocimiento del usuario, y por medio de lápiz y papel, se creó un boceto con las diferentes interfaces y usos que se proponen para la app web.
 
-![Prototipo 1](image_readme/.)
-![Prototipo 2](image_readme/.)
+* A la izquierda se muestra la página principal y a la derecha se muestra la página de búsqueda, luego de presionar el botón de "COMENZAR". 
+
+![Prototipo 1](image_readme/pbf1.png)
+
+* A la izquierda se muestra desplegado el select por género y a la derecha se despliega una ficha modal con la información de alguna película que seleccionó el usuario, luego de presionar su imagen. 
+
+![Prototipo 2](image_readme/pbf2.png)
 
 ### 👩 User persona 
 
@@ -154,7 +159,7 @@ A partir de ello, se testeó a 5 usuarios con distintos intereses por las pelíc
 * Uso de la data de películas a partir de 
 * Manejo de estilos CSS para la página de escritorio.
 * Trabajo colaborativo mediante el uso de Git y GitHub
-*Deploy con gh-pages de la aplicación [Filmaton]()
+* Deploy con gh-pages de la aplicación [Filmaton]()
 
 **Implementación de las funciones**
 
