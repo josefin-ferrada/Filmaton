@@ -1,6 +1,6 @@
 # Filmaton
 
-[**Filmaton**]() es una nueva aplicación que tiene como objetivo principal  entregar información específica sobre cualquier  película que el usuario o usuaria quiera ver, pudiendo escogerla según el tiempo disponible que tenga, el género que más le guste o encontrar a las mejor calificadas. 
+[**Filmaton**](https://josefin-ferrada.github.io/project-hackaton/src/index.html) es una nueva aplicación que tiene como objetivo principal  entregar información específica sobre cualquier  película que el usuario o usuaria quiera ver, pudiendo escogerla según el tiempo disponible que tenga, el género que más le guste o encontrar a las mejor calificadas. 
 
 ## 🚀 Planificación 
 
@@ -123,30 +123,26 @@ Se crea utilizando la plataforma [Figma](https://www.figma.com/proto/YnrXEy8snWy
 
 A partir de ello, se testeó a 5 usuarios con distintos intereses por las películas, quienes orientaron a mejorar la app por medio de feedback.
 
-* Las tareas a realizar fueron:
+* La tarea a realizar fue:
 
 1. Encontrar las películas de género "drama" y ver la descripción de alguna.
+2. Ver la ficha de "Forrest Gump"
+3. Lograr buscar por el tiempo disponible
+4. Volver a la página de inicio
 
-[Video 1 testeo prototipo alta fidelidad]()
-
-[Video 2 testeo prototipo alta fidelidad]()
-
-[Video 3 testeo prototipo alta fidelidad]()
-
-[Video 4 testeo prototipo alta fidelidad]()
-
-[Video 5 testeo prototipo alta fidelidad]()
+Los videos del testeo de alta fidelidad se encuentran [aquí](https://drive.google.com/drive/folders/1_5sZKIW4IiTnKs-ByGJYGITUj3YYh1Cb?usp=sharing).
 
 * Dificultades identificadas a partir del prototipo de alta fidelidad:
 
+1. El prototipo de alta fidelidad genera confusión para hacer el cambio de buscar por "género" a buscar por "tiempo disponible"
+2. Cuesta identificar el logo como un botón que permite volver a la página de inicio.
+3. La letra se muestra muy grande 
+
 * Mejoras identificadas a partir del prototipo de alta fidelidad:
 
-### 📹 Principios de diseño visual 
-
-1. Contraste
-2. Alineación
-3. Repetición 
-4. Proximidad 
+1. Es posible cambiar de búsqueda al escoger otro select diferente al escogido en un principio. 
+2. El logo debe indicar que permite llegar a la página de inicio. 
+3. Modificación del font-size para que sea de mejor agrado para el usuario. 
 
 ### ⌨️ Consideraciones en el desarrollo 
 
@@ -161,11 +157,30 @@ A partir de ello, se testeó a 5 usuarios con distintos intereses por las pelíc
 * Trabajo colaborativo mediante el uso de Git y GitHub
 * Deploy con gh-pages de la aplicación [Filmaton]()
 
-**Implementación de las funciones**
+### Organización del trabajo 
 
-### 📑 Evaluación heurística de la app 
+Trabajamos de forma colaborativa, cada una aportó en las distintas implicancias que tuvo el proyecto.
+
+Josefin Ferrada estuvo a cargo del código, la lógica del proyecto, construcción de funciones y el manejo de la data. 
+
+Tatiana Castro estuvo a cargo del manejo del DOM, utilización del framework Materialize, y complementó el trabajo de Josefin en cuanto a la funcionalidad y filtrado. 
+
+Fabiola Tapia estuvo a cargo del manejo del DOM, creación de interfaces, uso de Materialize y la aplicación de estilos con CSS.
+
+Constanza Urbina (quien escribe) estuvo a cargo del trabajo investigativo para dar con las necesidades de un usuario específico, dando apoyo en el manejo del DOM, uso de Materialize y CSS. 
+
+El squad estuvo trabajando muy de cerca y dándose apoyo constantemente, sobre todo en momentos en los que costó avanzar.  
+
+El resultado del trabajo se encuentra [aquí](https://josefin-ferrada.github.io/project-hackaton/src/index.html)
 
 ### 🛠️ Próximas mejoras 
+
+* Filtrar por el tiempo que dura la película fue uno de los objetivos que se propusieron para llevar a cabo este proyecto, por lo que queda pendiente para una próxima entrega. 
+* Lograr que la aplicación sea 100% responsive (con sus respectivos test y mejoras a partir del feedback de los usuarios).
+* Realizar testeos de la aplicación real. 
+* Acceder a filtros más específicos como la banda sonora de cada película o tráiler.
+* Mostrar reseñas más atractivas. 
+* Realizar una evaluación heurística completa para mejorar la app. 
 
 ### 📌 Autoras
 
