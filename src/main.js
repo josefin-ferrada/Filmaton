@@ -1,4 +1,5 @@
-const carrusel = document.getElementsByClassName(carousel);
+
+const carrusel = document.getElementsByClassName(carouselExampleFade);
 
 let btn = document.getElementById('search');
 
@@ -12,7 +13,6 @@ if (type != '') {
 	url += '&type='+type;
 
 }
-
 console.log(url)
 
 
@@ -22,75 +22,117 @@ fetch(url)
 
 
 .then(data => {
-	let cardContainer = document.getElementById("id1");
-	let text ='';
-
-	data.Search.forEach(function(element){
-		 text += `<div class="row">
-		 <div class="col s12 m6">
-	      <div class="card">
-	        <div class="card-image">
-	          <img src="${element.Poster}">
-	          
-	          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-	        </div>
-	        <div class="card-content">
-
-						<p><span class="card-title">${element.Title}</span>.</p>
-						
-						<p>${element.Year}</p>
+	if (data.Response == "True"){
+		let cardContainer = document.getElementById("id1");
+		let text ='';
+		console.log(data);
+		data.Search.forEach(function(element){
+			 text += `
 
 
-	        </div>
-	      </div>
-	    </div>
-		</div>`
-		
+			
+			
+				<div class="col l3" >
+			      <div class="card large" class="card-title">
+			        <div class="card-image">
+			          <img src="${element.Poster}">
+			          
+			        </div>
+			        <div class="card-content">
 
-	 });
+								<p><span class="card-title">${element.Title}</span>.</p>
+								<a class="waves-effect waves-light btn modal-trigger" id="${element.imdbID}"href="#modal-${element.imdbID}">Ver más</a>
+								<p>${element.Year}</p>
+			        </div>
+			      </div>
+		    	</div>
 
-  	cardContainer.innerHTML= text;
+			
+			<div id="modal-${element.imdbID}" class="modal">
+			    <div class="modal-content">
+			      	
+			    
+				    <div class="row"> 
 
- 
+					    <div class="col s12 s4 m4 l4 ">
+							<div class="align-image">
+					      	<img src="${element.Poster}">
+					      	</div>
+					   	</div>
+
+				    	<div class="class="col s4 m4 l4" id="modal-body${element.imdbID}">
+				    	</div> 
+
+				    </div>
+
+				    <div class="modal-footer">
+				      	<a href="#!" class="waves-effect waves-light btn modal-close ">Cerrar</a>
+				    </div>
+			    </div>
+			</div>`;
+			
+
+		});
+
+	  	cardContainer.innerHTML= text;
+	  	var elems = document.querySelectorAll('.modal');
+	    var instances = M.Modal.init(elems);
+
+	    let btnModals = document.querySelectorAll('.modal-trigger');
+
+	   	btnModals.forEach(function(element){
+	   		element.addEventListener('click', () => {
+	   			console.log(element.id);
+	   			fetch('http://www.omdbapi.com/?i='+element.id+'&apiKey=5648970a')
+
+	   			.then(response => response.json())
+
+	   			.then(respuesta => {
+		   			console.log(respuesta);
+		   			let modalNew= document.getElementById('modal-body'+element.id);
+		   			modalNew.innerHTML = `
+		   								 <table class="responsive-table">
+									        <thead>
+									          <tr>
+									          	<th>Título:</th>
+									            <td>${respuesta.Title}</td>
+									          
+									              
+									          </tr>
+									          <tr>
+									            <th>Año:</th>
+									            <td>${respuesta.Year}</td>
+									              
+									          </tr>
+									          <tr>
+									            <th>Director:</th>
+									            <td>${respuesta.Director}</td>
+									              
+									          </tr>
+									          <tr>
+									            <th>Reparto:</th>
+									            <td>${respuesta.Actors}</td>
+									              
+									          </tr>
+									        </thead>
+
+									        <tr>
+									            <th>Género:</th>
+									            <td>${respuesta.Genre}</td>
+									              
+									          </tr>
+										</table>`;
+	   			})
+	   		});
+	    });
+	}
+
+	else{
+
+		alert("Llena el campo de titulo")
+	}
+
 
 })
 .catch(err => console.log(err));
 })
-
-
-//	let title = document.getElementById('title').value;
-//		let urlimdb= 'http://www.omdbapi.com/?s='+title+'&i='+imdbID+'&apiKey=3067dff4';
-//if (type != '') {
-//	url += '&type='+type;
-
-
-
-//		fetch(urlimdb)
-
-//		.then(response => response.json())
-		
-		
-//		.then(data => {
-//			let cardContainer = document.getElementById("id1");
-//			let text ='';
-		
-//			data.Search.forEach(function(element){
-//				 text += `<div class="row">
-//					<div class="col s12 m6">
-//						<div class="card">
-//							<div class="card-image">
-//								<img src="${element.Director}">
-//								<span class="card-title">Card Title</span>
-//								<a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-//							</div>
-//							<div class="card-content">
-//								<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-//							</div>
-//						</div>
-//					</div>
-//				</div>`;
-		
-//			 });
-
-//			})
-

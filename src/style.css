@@ -1,21 +1,29 @@
 /*selector universal "*"*/
 *{
     padding: 0px; 
-    margin: 0px auto;
-    font-family: roboto;
-
     
 } 
 
+input{
+    color: white;
+    width: 100%;
+
+}
+
 body {
+    margin: 0px auto;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
     background-color: black;
-    font-family: roboto;
     color: white; 
+    font-family: 'Saira Extra Condensed', sans-serif;
+    font-size: 16px;
 }
 
+#title,#year{
+    color: white; 
+}
 footer{
     margin:0px;
 }
@@ -26,7 +34,7 @@ nav{
     z-index: 100;
     padding: 0px 100px;
     top: 0px;
-    height: 100px;
+    height: 200px;
 }
 
 nav li a{
@@ -34,9 +42,21 @@ nav li a{
 }
 
 #logo{ 
-    height: 130px;   
-    padding-top: 10px; 
-    padding-left: 100px;     
+    height: 190px;
+    width: 250px;   
+    padding-top: 10px;      
+
+}
+
+/* estilos tarjeta*/
+
+.card-title{
+    color: black;
+}
+
+.modal{
+    color: black;
+    width: 80%;
 }
 
 /* Estilos footer */ 
@@ -52,13 +72,41 @@ footer p{
     font-size: 14px;
     color: white;
     text-align: left;    
+    background-attachment: fixed;
 }
 
 /*a)Página de inicio*/
 
 #divone{
-    padding-top: 100px; 
+    padding-top: 200px; 
+    display: inherit;
+    width: 100%;
+    margin-left: 100px;
 }
+
+table{
+    width: 0%;
+}
+a{
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 20px;
+}
+
+#search{
+    margin-left: 100px;
+}
+
+.margin-form{
+    margin-left: 100px;
+}
+
 #carrusel, #carruselone, #carruseltwo, #carruseltree, #carruselfour {
    transition: 0ms;
+}
+.align-image{
+    text-align: center;
+}
+.modal-content {
+    padding: 14px;
+    padding-left: 0px;
 }
