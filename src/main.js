@@ -134,3 +134,169 @@ fetch(url)
 })
 .catch(err => console.log(err));
 })
+
+
+let secondScreen = `  <div  class="container col l12 ">
+      <input type="text" id="title" name="" placeholder="Ingrese Título del film"  >
+       <select id="genre"class="input-field col s4" style="display: block;">
+        <option value="">ninguno</option>
+        <option value="28">Action</option>
+        <option value="12">Adventure</option>
+        <option value="16">Animation</option>
+        <option value="35">Comedy</option>
+        <option value="80">Crime</option>
+        <option value="18">Drama</option>
+        <option value="99">Documentary</option>
+        <option value="10751">Family</option>
+        <option value="14">Fantasy</option>
+        <option value="36">History</option>
+        <option value="27">Horror</option>
+        <option value="10402">Music</option>
+        
+      </select>
+
+       <div> <a  id="search-advanced"style="margin-right: 20px;" class="waves-effect waves-light btn">&nbsp;&nbsp;&nbsp;Iniciar Búsqueda&nbsp;&nbsp;&nbsp;</a></div>
+      
+     
+    </div>
+
+        
+   
+    <section >
+        <div class="row" style="width: 1200px;" id="id2">
+            <div class="col s12 m4 l5" >
+              
+            </div>
+        </div>
+    </section>
+`
+
+let advancedSearch = document.getElementById('advanced-search');
+
+advancedSearch.addEventListener('click', () => {
+
+	let container = document.getElementById('divone');
+
+	container.innerHTML= secondScreen;
+	let btnAdvanced = document.getElementById('search-advanced');
+
+btnAdvanced.addEventListener('click', () => {
+
+let title = document.getElementById('title').value;
+
+if (title != '') {
+
+	let newUrl = 'https://api.themoviedb.org/3/search/movie?api_key=662724e1bb4b69079def10cb9e11e4ef&query='+title;
+	console.log(newUrl)
+
+	fetch(newUrl)
+
+	.then(response => response.json())
+
+
+	.then(data => {
+
+			let condition = document.getElementById('genre').value;
+			if(condition == ''){
+				showCards(data.results);
+			}
+			else{
+				let filtrado = window.data.filterData(data.results,condition);
+				showCards(filtrado)
+			}
+
+			
+			
+		  	var elems = document.querySelectorAll('.modal');
+		    var instances = M.Modal.init(elems);
+
+		    let btnModals = document.querySelectorAll('.modal-trigger');
+		
+			
+
+
+			
+
+	})
+	.catch(err => console.log(err));
+}
+else{
+	alert("Ingresa un título");
+}
+
+
+
+
+
+
+
+});
+
+});
+
+
+
+function showCards(dataToPrint){
+	let cardContainer = document.getElementById("id2");
+	let text ='';
+	console.log(dataToPrint);
+	dataToPrint.forEach(function(element){
+		let textFirstGenre = getGenreText(element.genre_ids[0]);
+		 text += `
+					<div class="col l3" >
+				      <div class="card large" class="card-title">
+				        <div class="card-image">
+				          <img src="https://image.tmdb.org/t/p/w500${element.poster_path}">
+				          
+				        </div>
+				        <div class="card-content">
+
+									<p><span class="card-title">${element.title}</span></p>
+									<a class="waves-effect waves-light btn modal-trigger" id="${element.id}" href="#modal2-${element.id}">Ver más</a>
+									<p>${element.release_date}</p>
+									<p>${textFirstGenre}</p>
+				        </div>
+				      </div>
+			    	</div>
+
+				
+				<div id="modal2-${element.id}" class="modal">
+				    <div class="modal-content">
+				      	
+				    
+					    <div class="row"> 
+
+						    <div class="col s12 s4 m4 l4 ">
+								<div class="align-image">
+						      	<img src="https://image.tmdb.org/t/p/w500${element.poster_path}">
+						      	</div>
+						   	</div>
+
+					    	<div class="class="col s4 m4 l4" id="modal-body${element.id}">
+					    	</div> 
+
+					    </div>
+
+					    <div class="modal-footer">
+					      	<a href="#!" class="waves-effect waves-light btn modal-close ">Cerrar</a>
+					    </div>
+				    </div>
+				</div>`;
+				
+
+	});
+	cardContainer.innerHTML= text;
+}
+
+
+function getGenreText(id){
+	const genres = {28:'Action',12:'Adventure',16:'Animation',35:'Comedy',80:'Crime',99:'Documentary',
+		18:'Drama',10751:'Family',14:'Fantasy',36:'History',27:'Horror',10402:'Music',9648:'Mystery',10749:'Romance',
+		878:'Science Fiction',10770:'TV Movie',53:'Thriller',10752:'War',37:'Western'};
+	return genres[id];
+}
+
+ document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.carousel');
+    var instances = M.Carousel.init(elems);
+  });

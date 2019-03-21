@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,35 +12,39 @@
 
 <body>
 
-    <nav class="nav-wrapper">        
-        <a href="#" class="brand-logo">
-          <img src="https://i.ibb.co/d4Qm1QK/35mm-Film-Roll.png" id="logo" alt="logo Filmaton"/> 
-        </a>
-        <a  data-target="mobile-demo" class="sidenav-trigger">
-          <i class="material-icons">menu</i>
-        </a>
-        <ul class="right hide-on-med-and-down"> 
-          <li><a class="tutorial" href="#">¿Quienes somos?</a></li>
-          <li><a class="search" href="#">Iniciar búsqueda</a></li>
-        </ul>     
-    </nav>
+      <nav>
+    <div class="nav-wrapper">
+      <a href="index.html" class="brand-logo">
+        <img src="https://i.ibb.co/d4Qm1QK/35mm-Film-Roll.png" id="logo" alt="logo Filmaton"/> 
+      </a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="sass.html">¿Quienes somos?</a></li>
+        <li><a href="badges.html">Iniciar Búsqueda</a></li>
+        <li><a href="collapsible.html">Instrucciones</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <div id="divone" class="container col l12 ">
+   <div id="divone" class="container col l12 ">
+    <div class="input-field col s4 margin-form">
+      <select id="selectfilm" class="browser-default" >
+        <option value="type">Escoge lo que buscas</option>
+        <option value="movie">Películas</option>
+        <option value="series">Series</option>
+      </select>
+    </div>
+    <div class="input-field col s4">
+        <input type="text" id="title" name="" placeholder="Ingrese Título">
+    </div>
+    <div class="input-field col s4 margin-form">
+      <input id="year" type="text" name="" placeholder="Ingrese Año">
+    </div>
+    <div class="input-field col s4 margin-form">
+    <div> <a id="search" style="margin-right: 20px;" class="waves-effect waves-light btn">&nbsp;&nbsp;&nbsp;Iniciar Búsqueda&nbsp;&nbsp;&nbsp;</a></div>
+     <div> <a id="advanced-search" class="waves-effect waves-light btn" style="margin-left: 20px;">&nbsp;Busqueda Avanzada&nbsp;</a></div>
+   </div>
 
-        <div class="input-field col s4">
-            <input type="text" id="title" name="" placeholder="Ingrese Título del film" value="batman">
-        </div>
-        <div class="input-field col s4 margin-form">
-            <input id="year" type="text" name="" placeholder="Ingrese año del film">
-        </div>
-        <div class="input-field col s4 margin-form">
-            <select id="type" class="browser-default" >
-            <option value="">ninguna</option>
-            <option value="movie">Películas</option>
-            <option value="series">Series</option>
 
-        </select>
-        </div>
          <div class="col s9 m4 l4">
 
       <div class="input-field">
@@ -66,7 +69,7 @@
    </div>
        
     </div>
-    <div> <a id="search" class="waves-effect waves-light btn">&nbsp;Iniciar Búsqueda&nbsp;</a></div>
+    
 
    
     <section >
@@ -86,6 +89,7 @@
     </body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="main.js"></script>
+    <script src="data.js"></script>
 </body>
 
 </html>
