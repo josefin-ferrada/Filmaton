@@ -3,15 +3,22 @@ btnTwo.addEventListener('click', () => {
 	let cardContainer = document.getElementById("divone");
 	cardContainer.innerHTML='';
 	cardContainer.innerHTML+=	
-	` 
+	
+	`<div class="col s12 s4 m4 l4 ">
 	<div class="input-field" >
-	<select id="typeOne" class="browser-default margin-form no">
+	  <select id="typeOne" class="browser-default margin-form no">
 		<option value="" >Tiempo Disponible</option>
 		<option value="1">1Hr</option>
 		<option value="2">2Hr</option>
 		<option value="3">3Hr</option>
-	</select>
-	<select id="typeTwo" class="browser-default margin-form no">
+	
+	
+		</select>
+		</div>
+		</div>
+
+<div class="col s12 s4 m4 l4 ">
+	  <select id="typeTwo" class="browser-default margin-form no">
 		<option value="" >Genero</option>
 		<option value="1">Drama</option>
 		<option value="2">Terror</option>
@@ -47,40 +54,27 @@ fetch(url)
 		let text ='';
 		console.log(data);
 		data.Search.forEach(function(element){
-			 text += `
-
-
-			
-			
-				<div class="col l3" >
+			 text += `<div class ="col l3" >
 			      <div class="card large" class="card-title">
 			        <div class="card-image">
 			          <img src="${element.Poster}">
-			          
-			        </div>
-			        <div class="card-content">
-
-								<p><span class="card-title">${element.Title}</span>.</p>
-								<a class="waves-effect waves-light btn modal-trigger" id="${element.imdbID}"href="#modal-${element.imdbID}">Ver más</a>
-								<p>${element.Year}</p>
-			        </div>
+			          </div>
+			          <div class="card-content">
+                <p><span class="card-title">${element.Title}</span>.</p>
+							  <a class="waves-effect waves-light btn modal-trigger" id="${element.imdbID}"href="#modal-${element.imdbID}">Ver más</a>
+							<p>${element.Year}</p>
 			      </div>
-		    	</div>
-
-			
-			<div id="modal-${element.imdbID}" class="modal">
+			    </div>
+		    </div>
+        <div id="modal-${element.imdbID}" class="modal">
 			    <div class="modal-content">
-			      	
-			    
-				    <div class="row"> 
-
-					    <div class="col s12 s4 m4 l4 ">
-							<div class="align-image">
-					      	<img src="${element.Poster}">
-					      	</div>
-					   	</div>
-
-				    	<div class="class="col s4 m4 l4" id="modal-body${element.imdbID}">
+			      <div class="row"> 
+            <div class="col s12 s4 m4 l4 ">
+						<div class="align-image">
+					    <img src="${element.Poster}">
+					  </div>
+					 </div>
+            <div class="class="col s4 m4 l4" id="modal-body${element.imdbID}">
 				    	</div> 
 
 				    </div>
