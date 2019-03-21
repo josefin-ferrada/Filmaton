@@ -155,7 +155,7 @@ Los videos del testeo de alta fidelidad se encuentran [aquí](https://drive.goog
 * Uso de la data de películas a partir de 
 * Manejo de estilos CSS para la página de escritorio.
 * Trabajo colaborativo mediante el uso de Git y GitHub
-* Deploy con gh-pages de la aplicación [Filmaton]()
+* Deploy con gh-pages de la aplicación [Filmaton](https://josefin-ferrada.github.io/project-hackaton/src/index.html)
 
 ### Organización del trabajo 
 
