@@ -1,4 +1,5 @@
 
+
 let btn = document.getElementById('search');
 
 btn.addEventListener('click', () => {
@@ -11,7 +12,6 @@ if (type != '') {
 	url += '&type='+type;
 
 }
-
 console.log(url)
 
 
@@ -25,27 +25,19 @@ fetch(url)
 	let text ='';
 
 	data.Search.forEach(function(element){
-		 text += `<div class="row">
-		 <div class="col s12 m6">
-	      <div class="card">
-	        <div class="card-image">
-	          <img src="${element.Poster}">
-	          
-	          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-	        </div>
-	        <div class="card-content">
-
-						<p><span class="card-title">${element.Title}</span>.</p>
-						
-						<p>${element.Year}</p>
-
-
-	        </div>
-	      </div>
-	    </div>
-		</div>`
-		
-
+		 text += ` <div class="card">
+		 <div class="card-image waves-effect waves-block waves-light">
+			 <img class="activator" src="${element.Poster}">
+		 </div>
+		 <div class="card-content">
+			 <span class="${element.Title}" text-background black">${element.Title}<i class="material-icons right">more_vert</i></span>
+			 <p>${element.Year}</p>
+		 </div>
+		 <div class="card-reveal">
+			 <span class="card-title #cfd8dc blue-grey lighten-4">Card Title<i class="material-icons right">close</i></span>
+			 <p>Here is some more information about this product that is only revealed once clicked on.</p>
+		 </div>
+	 </div>`
 	 });
 
   	cardContainer.innerHTML= text;
@@ -56,3 +48,6 @@ fetch(url)
 .catch(err => console.log(err));
 })
 
+
+
+				
