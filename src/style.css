@@ -2,7 +2,7 @@
 *{
     padding: 0px; 
     margin: 0px auto;
-    font-family: roboto;
+    
 
     
 } 
@@ -12,10 +12,14 @@ body {
     min-height: 100vh;
     flex-direction: column;
     background-color: black;
-    font-family: roboto;
     color: white; 
+    font-family: 'Saira Extra Condensed', sans-serif;
+    font-size: 16px;
 }
 
+#title,#year{
+    color: white; 
+}
 footer{
     margin:0px;
 }
