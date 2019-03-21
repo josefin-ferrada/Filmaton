@@ -1,3 +1,10 @@
+document.addEventListener('DOMContentLoaded', function() {
+	var elems = document.querySelectorAll('.carousel');
+	var instances = M.Carousel.init(elems);
+});
+
+let web = document.getElementsById('web');
+
 let btnTwo = document.getElementById('searchTwo');
 btnTwo.addEventListener('click', () => {
 	let cardContainer = document.getElementById("divone");
@@ -29,6 +36,7 @@ btnTwo.addEventListener('click', () => {
 	</select>
 </div>`	
 });
+
 let btn = document.getElementById('search');
 btn.addEventListener('click', () => {
 

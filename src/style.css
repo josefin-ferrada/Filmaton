@@ -44,6 +44,7 @@ nav li a{
     height: 190px;
     width: 250px;   
     padding-top: 10px;      
+
 }
 
 /* estilos tarjeta*/
@@ -136,7 +137,6 @@ a{
 .align-image{
     text-align: center;
 }
-
 .modal-content {
     padding: 14px;
     padding-left: 0px;
@@ -154,4 +154,13 @@ a{
 #typeTwo{
     margin-left: 100px;
     margin-top: 15px;
+}
+#web{
+    margin: 125px;
+    float: left;
+    align-content: inline;
+}
+#img-ini{
+    float: right;
+    align-content: inline;
 }
