@@ -1,5 +1,4 @@
 
-
 let btn = document.getElementById('search');
 
 btn.addEventListener('click', () => {
@@ -12,7 +11,6 @@ if (type != '') {
 	url += '&type='+type;
 
 }
-
 console.log(url)
 
 
@@ -136,4 +134,3 @@ fetch(url)
 })
 .catch(err => console.log(err));
 })
-
