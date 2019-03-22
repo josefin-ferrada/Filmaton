@@ -1,91 +1,72 @@
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Pelis</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:300" rel="stylesheet">
 </head>
-
 <body>
-
-      <nav>
-    <div class="nav-wrapper">
-      <a href="index.html" class="brand-logo">
-        <img src="https://i.ibb.co/d4Qm1QK/35mm-Film-Roll.png" id="logo" alt="logo Filmaton"/> 
+        <nav>
+    <div class="navbar-fixed">
+      <a href="#" class="brand-logo">
+        <a href="index.html" class="brand-logo">
+          <img src="https://i.ibb.co/d4Qm1QK/35mm-Film-Roll.png"  id="logo" alt="logo Filmaton"/> 
       </a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="sass.html">¿Quienes somos?</a></li>
-        <li><a href="badges.html">Iniciar Búsqueda</a></li>
-        <li><a href="collapsible.html">Instrucciones</a></li>
+        <li><a class="size" href="sass.html">Nosotros</a></li>
+        <li><a  class="size" href="badges.html">Inicia tu busqueda</a></li>
+        <li><a class="size" href="collapsible.html">Instrucciones</a></li>
       </ul>
     </div>
   </nav>
+  
 
-   <div id="divone" class="container col l12 ">
-    <div class="input-field col s4 margin-form">
-      <select id="selectfilm" class="browser-default" >
+
+   <div class="row"  id="divone">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s3">
+          
+          <select id="selectfilm" class="browser-default" >
         <option value="type">Escoge lo que buscas</option>
         <option value="movie">Películas</option>
         <option value="series">Series</option>
       </select>
-    </div>
-    <div class="input-field col s4">
+        </div>
+      <div class="input-field col s3">
         <input type="text" id="title" name="" placeholder="Ingrese Título">
-    </div>
-    <div class="input-field col s4 margin-form">
-      <input id="year" type="text" name="" placeholder="Ingrese Año">
-    </div>
-    <div class="input-field col s4 margin-form">
-    <div> <a id="search" style="margin-right: 20px;" class="waves-effect waves-light btn">&nbsp;&nbsp;&nbsp;Iniciar Búsqueda&nbsp;&nbsp;&nbsp;</a></div>
-     <div> <a id="advanced-search" class="waves-effect waves-light btn" style="margin-left: 20px;">&nbsp;Busqueda Avanzada&nbsp;</a></div>
+      </div>
+      <div class="input-field col s3 ">
+        <input id="year" type="text" name="" placeholder="Ingrese Año">
+      </div>
+      <div class="input-field col s3 ">
+    <div> <a id="search" class="waves-effect waves-light btn yellow">&nbsp;&nbsp;&nbsp;Iniciar Búsqueda&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></div>
+     <div> <a id="advanced-search" class="waves-effect waves-light btn yellow">&nbsp;Busqueda Avanzada&nbsp;&nbsp;</a></div>
    </div>
 
-
-         <div class="col s9 m4 l4">
-
-      <div class="input-field">
-        <select id="type" class="browser-default margin-form">
-          <option value="" >Tiempo Disponible</option>
-          <option value="1">1Hr</option>
-          <option value="2">2Hr</option>
-          <option value="3">3Hr</option>
-        </select>
       </div>
-    </div>
-    <div class="col s12 m4 l4">
-      <div class="input-field">
-        <select id="type" class="browser-default margin-form">
-          <option value="" >Genero</option>
-          <option value="1">1Hr</option>
-          <option value="2">2Hr</option>
-          <option value="3">3Hr</option>
-        </select>
-      </div>
-    </div>
-   </div>
-       
-    </div>
-    
 
-   
-    <section >
-        <div class="row" style="width: 1200px;" id="id1">
-            <div class="col s12 m4 l5" >
+    </form>
+
+<section id="welcome">
+  
+</section>
+
+
+
+  <section >
+        <div class="row"  id="id1">
+            <div class="col s12 m4 l6" >
               
             </div>
         </div>
     </section>
 
 
-    <footer>
-        <p>Enciclopedia de películas Filmaton, Chile</p> 
-        <p>Diseñado y construido por plagio.org©</p>
-      </footer>  
+  
 
     </body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
