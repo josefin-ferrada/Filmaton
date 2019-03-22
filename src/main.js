@@ -33,7 +33,7 @@ btn.addEventListener('click', () => {
 	let year = document.getElementById('year').value;
 	let title =document.getElementById('title').value;
 	let type = document.getElementById('selectfilm').value;
-	let url= 'http://www.omdbapi.com/?s='+title+'&y='+year+'&apiKey=5648970a';
+	let url= 'https://www.omdbapi.com/?s='+title+'&y='+year+'&apiKey=5648970a';
 	if (type != '') {
 		url += '&type='+type;
 
@@ -109,7 +109,7 @@ btn.addEventListener('click', () => {
 		   	btnModals.forEach(function(element){
 		   		element.addEventListener('click', () => {
 		   			console.log(element.id);
-		   			fetch('http://www.omdbapi.com/?i='+element.id+'&apiKey=5648970a')
+		   			fetch('https://www.omdbapi.com/?i='+element.id+'&apiKey=5648970a')
 
 		   			.then(response => response.json())
 
