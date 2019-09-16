@@ -1,20 +1,36 @@
 window.data = {
-
-    filterData: (pokemonData, condition) => {
+    filterData: (data, condition) => {
         let result;
-        if (condition === "none") {
-            result = pokemonData;
-        } else {
-            result = pokemonData.filter(element => {
-                if (element.type.includes(condition)) {
-                    return element;
-                }
+        console.log(data);
+        result = data.filter(element => {
+            if (element.genre_ids.includes(parseInt(condition))) {
+                console.log("contiene");
+                return element;
+            }
+        });
+        return result;
+    },
+    sortData: (data, Order) => {
+        let ordered;
+        if (Order === "asc") {
+            ordered = data.sort((a, b) => {
+                if (a.popularity < b.popularity)
+                    return -1;
+                else if (a.popularity > b.popularity)
+                    return 1;
+                else
+                    return 0;
+            });
+        } else if (Order === "desc") {
+            ordered = data.sort((a, b) => {
+                if (a.popularity < b.popularity)
+                    return 1;
+                else if (a.popularity > b.popularity)
+                    return -1;
+                else
+                    return 0;
             });
         }
-
-        return result;
-
+        return ordered;
     }
-
-    
-}
+};
