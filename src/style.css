@@ -1,3 +1,51 @@
+
+body {
+    background-color: black;
+}
+
+#divone {
+    margin-top: 50px;
+    padding: 3%;
+}
+
+input {
+    border-bottom: 1px solid #FFFA7D;
+    color: #FFFA7D;
+}
+
+#selectfilm {
+    background-color: black;
+    border: solid #FFFA7D;
+    color: #FFFA7D;
+}
+
+#genre {
+    width: 240px;
+    background-color: black;
+    border: solid #FFFA7D;
+    color: #FFFA7D;
+    margin-bottom: 50px;
+}
+
+#search-advanced {
+    margin-top: 20px;
+}
+
+#order {
+    background-color: black;
+    border: solid #FFFA7D;
+    color: #FFFA7D;
+    width: 230px;
+}
+
+.yellow {
+    background-color: #FFFA7D;
+    color: black;
+    margin-bottom: 3px;
+}
+
+nav {
+
 body{
     background-color: black;
 
@@ -58,6 +106,20 @@ nav{
     font-family: 'Roboto Condensed', sans-serif;
 }
 
+
+#logo {
+    width: 230px;
+    height: 170px;
+    text-align: center;
+}
+
+li {
+    margin-right: 50px;
+}
+
+.size {
+    font-size: 25px;
+  
 #logo{
     width: 230px;
     height: 170px;
@@ -73,4 +135,5 @@ li{
 .size{
     font-size: 25px;
 }
+
 
