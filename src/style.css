@@ -1,3 +1,4 @@
+
 body {
     background-color: black;
 }
@@ -44,12 +45,67 @@ input {
 }
 
 nav {
+
+body{
+    background-color: black;
+
+}
+
+
+#divone{
+    margin-top: 50px;
+    padding:3%;
+}
+
+input{
+    border-bottom: 1px solid #FFFA7D;
+    color: #FFFA7D;
+}
+#selectfilm{
+   
+    background-color: black;
+    border: solid #FFFA7D;
+    color:#FFFA7D;
+}
+
+#genre{
+
+    width: 240px;
+    background-color: black;
+    border: solid #FFFA7D;
+    color:#FFFA7D;
+    margin-bottom: 50px;
+
+}
+
+#search-advanced{
+    margin-top: 20px;
+}
+
+#order{
+    background-color: black;
+    border: solid #FFFA7D;
+    color:#FFFA7D;
+    width: 230px;
+}
+
+
+.yellow{
+    background-color:#FFFA7D;
+    
+    color:black;
+    margin-bottom: 3px;
+}
+
+
+nav{
     background-color: black;
     height: 150px;
     padding-top: 10px;
     padding-left: 40px;
     font-family: 'Roboto Condensed', sans-serif;
 }
+
 
 #logo {
     width: 230px;
@@ -63,4 +119,21 @@ li {
 
 .size {
     font-size: 25px;
+  
+#logo{
+    width: 230px;
+    height: 170px;
+    text-align: center;
+
 }
+
+li{
+    margin-right: 50px;
+
+}
+
+.size{
+    font-size: 25px;
+}
+
+
