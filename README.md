@@ -1,6 +1,6 @@
 # Filmaton
 
-[**Filmaton**](https://josefin-ferrada.github.io/project-hackaton/src/index.html) es una nueva aplicación que tiene como objetivo principal  entregar información específica sobre cualquier  película que el usuario o usuaria quiera ver, pudiendo escogerla según el tiempo disponible que tenga, el género que más le guste o encontrar a las mejor calificadas. 
+[**Filmaton**](https://josefin-ferrada.github.io/Filmaton/src/index.html) es una nueva aplicación que tiene como objetivo principal  entregar información específica sobre cualquier  película que el usuario o usuaria quiera ver, pudiendo escogerla según el tiempo disponible que tenga, el género que más le guste o encontrar a las mejor calificadas. 
 
 ## 🚀 Planificación 
 
